@@ -4,7 +4,6 @@
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.datasets import load_breast_cancer
-from sklearn.metrics import accuracy_score
 
 # Load dataset
 breast_cancer_data = load_breast_cancer()
