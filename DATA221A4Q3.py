@@ -33,3 +33,12 @@ indices = np.argsort(importances)[::-1][:5]
 print("Top 5 most important features:")
 for index in indices:
     print(f"{breast_cancer_data.feature_names[index]}: {importances[index]}")
+
+# ===========================================================
+# Discussion:
+
+# Controlling the complexity of the tree (like limiting depth) helps prevent overfitting, since
+# it reduces model complexity by forcing the model to learn broader, more general patterns,
+# instead of just memorizing the training data.
+# Feature importance values improve interpretability because they show which features the model
+# relies on the most when making decisions, allowing us to understand the model's behavior.
