@@ -24,6 +24,16 @@ test_accuracy = decision_tree_classifier.score(feature_test, target_test)
 print(f"Training accuracy: {train_accuracy}")
 print(f"Test accuracy: {test_accuracy}")
 
+# ===================================================================================
+# Discussion:
+
+# Entropy measures the impurity or uncertainty in the target variable. Splits with lower
+# entropy creates more groups with a single class, which increases information gain. Given
+# the observed results above (1 for training accuracy and around 0.91 for test accuracy), this
+# suggests that the tree is overfitting, since the training accuracy is extremely high while the
+# test accuracy is lower. This means that the tree is memorizing the training data rather than
+# learning general patterns.
+
 
 
 
