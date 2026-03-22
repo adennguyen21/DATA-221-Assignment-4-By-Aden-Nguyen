@@ -22,3 +22,14 @@ train_accuracy = decision_tree_classifier_max_depth_4.score(feature_train, targe
 test_accuracy = decision_tree_classifier_max_depth_4.score(feature_test, target_test)
 print(f"Training accuracy: {train_accuracy}")
 print(f"Test accuracy: {test_accuracy}")
+
+print("======================================")
+# Print top five most important features
+importances = decision_tree_classifier_max_depth_4.feature_importances_
+
+# Gets the top five most important indices
+indices = np.argsort(importances)[::-1][:5]
+
+print("Top 5 most important features:")
+for index in indices:
+    print(f"{breast_cancer_data.feature_names[index]}: {importances[index]}")
