@@ -16,4 +16,11 @@ unique, counts = np.unique(target_vector_y, return_counts=True)
 print(f"Class distribution: {dict(zip(unique, counts))}")
 
 # ======================================================================
-# Questions:
+# Discussion:
+
+# This dataset is imbalanced because the benign class (the one with 357 samples) has
+# more samples than the malignant class (the one with 212 sample).
+# Class balance matters because many classifiers can become biased toward the majority
+# class, achieving high accuracy while performing poorly on the minority class. This is
+# especially important in medical diagnosis like with this dataset, as misclassifying
+# malignant cases can have serious consequences.
