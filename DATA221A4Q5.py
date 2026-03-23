@@ -35,4 +35,22 @@ y_predicted_tree = decision_tree_classifier_max_depth_4.predict(feature_test)
 confusion_matrix_tree = confusion_matrix(target_test, y_predicted_tree)
 print(f"Decision Tree Confusion Matrix:\n {confusion_matrix_tree}")
 
-# ====================================================================================
+# =========================================================================================
+
+# Train neural network model
+tf.random.set_seed(1)
+
+neural_network_model = Sequential()
+
+neural_network_model.add(InputLayer(input_shape = (feature_train.shape[1],)))
+neural_network_model.add(Dense(16)) # Hidden layer
+neural_network_model.add(Dense(1, activation = "sigmoid"))
+
+neural_network_model.compile(loss = "binary_crossentropy", metrics = ["accuracy"])
+
+history = neural_network_model.fit(feature_train_x_scaled, target_train, epochs = 20)
+
+# Print confusion matrix for neural network
+y_predicted_neural_network = (neural_network_model.predict(feature_test_x_scaled) > 0.5).astype(int)
+confusion_matrix_neural_network = confusion_matrix(target_test, y_predicted_neural_network)
+print(f"Neural Network Confusion Matrix:\n {confusion_matrix_neural_network}")
