@@ -5,8 +5,6 @@ from tensorflow.keras.datasets import fashion_mnist
 import tensorflow as tf
 from tensorflow.keras import layers, models
 
-from DATA221A4Q2 import test_accuracy
-
 print("TF version:", tf.__version__)
 
 # Split dataset
