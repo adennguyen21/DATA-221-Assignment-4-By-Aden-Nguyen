@@ -60,3 +60,12 @@ for index in misclassified_images:
     plt.imshow(X_test[index].reshape(28, 28), cmap = "gray")
     plt.title(f"True label: {y_test[index]} ({class_names[y_test[index]]}), Predicted label: {y_predicted_labels[index]} ({class_names[y_predicted_labels[index]]})")
     plt.show()
+
+# ====================================================================================
+# Discussion:
+
+# A common pattern I observed in the misclassifications is that visually similar clothing items
+# (such as shirts, T-shirts, and pullovers) are confused with one another. A realistic way to
+# improve the CNN's performance is to use a deeper CNN with more convolutional layers, or apply
+# data augmentation (creating new training images by slightly modifying the existing ones) to
+# help the model generalize better to variations in the images.
