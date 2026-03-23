@@ -54,3 +54,13 @@ history = neural_network_model.fit(feature_train_x_scaled, target_train, epochs 
 y_predicted_neural_network = (neural_network_model.predict(feature_test_x_scaled) > 0.5).astype(int)
 confusion_matrix_neural_network = confusion_matrix(target_test, y_predicted_neural_network)
 print(f"Neural Network Confusion Matrix:\n {confusion_matrix_neural_network}")
+
+# =================================================================================================
+# Discussion:
+
+# I would prefer the neural network model because it typically achieves higher and more stable test accuracy.
+# (also because the name "neural network" sounds pretty cool.)
+# An advantage for the Decision Tree is interpretability, since its decisions can be visualized and understood
+# easily. Its limitation however is that it can still overfit or be super sensitive to small changes in the data.
+# On the other hand, the Neural Network's advantage is strong predictive performance, but its limitation is that
+# it behaves like a black box and is harder to interpret, unlike the Decision Tree.
