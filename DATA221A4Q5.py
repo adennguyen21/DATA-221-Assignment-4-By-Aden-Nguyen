@@ -8,7 +8,6 @@ from sklearn.preprocessing import StandardScaler
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, InputLayer
 import tensorflow as tf
-import numpy as np
 from sklearn.tree import DecisionTreeClassifier
 
 # Load dataset
