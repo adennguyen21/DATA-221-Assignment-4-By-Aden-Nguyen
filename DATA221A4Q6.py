@@ -41,4 +41,10 @@ cnn_model.fit(X_train, y_train,
 test_loss, test_accuracy = cnn_model.evaluate(X_test, y_test, verbose = 0)
 print(f"Test accuracy: {test_accuracy}")
 
+# =================================================================================
+# Discussion:
 
+# CNNs are preferred over fully connected networks for image data because they take advantage
+# of spatial patterns (nearby pixels that are related), and they use far fewer parameters.
+# The convolution layer learns local features such as edges, textures, and simple shapes, which
+# are combined in deeper layers to recognize more complex patterns in clothing images.
