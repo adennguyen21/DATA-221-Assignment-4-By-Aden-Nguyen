@@ -41,4 +41,10 @@ test_accuracy = neural_network_model.evaluate(feature_test_x_scaled, target_test
 print(f"Training Accuracy: {train_accuracy}")
 print(f"Test Accuracy: {test_accuracy}")
 
+# ======================================================================
+# Discussion:
 
+# Feature scaling is necessary for neural networks because unscaled features can cause unstable
+# or slow training. The weight-update process with every epoch works best when all input features
+# are on a similar scale. An epoch represents one full pass through the entire training dataset
+# during training, where the model updates its weights based on the observed errors.
