@@ -51,7 +51,12 @@ mis_index = (y_predicted_labels != y_test)
 misclassified_images = np.where(mis_index)[0][:3]
 
 # Display misclassified images
+class_names = [
+    "T-shirt/top", "Trouser", "Pullover", "Dress", "Coat",
+    "Sandal", "Shirt", "Sneaker", "Bag", "Ankle boot"
+]
+
 for index in misclassified_images:
     plt.imshow(X_test[index].reshape(28, 28), cmap = "gray")
-    plt.title(f"True label: {y_test[index]}, Predicted label: {y_predicted_labels[index]}")
+    plt.title(f"True label: {y_test[index]} ({class_names[y_test[index]]}), Predicted label: {y_predicted_labels[index]} ({class_names[y_predicted_labels[index]]})")
     plt.show()
